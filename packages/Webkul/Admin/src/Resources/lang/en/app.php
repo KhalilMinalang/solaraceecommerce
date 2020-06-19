@@ -2,7 +2,6 @@
 
 return [
     'save' => 'Save',
-    'copy-of' => 'Copy of',
     'create' => 'Create',
     'update' => 'Update',
     'delete' => 'Delete',
@@ -20,6 +19,7 @@ return [
     'true' => 'True',
     'false' => 'False',
     'apply' => 'Apply',
+    'action' => 'Action',
     'label' => 'Label',
     'name' => 'Name',
     'title' => 'Title',
@@ -42,7 +42,6 @@ return [
     ],
 
     'layouts' => [
-        'app-version' => 'Version : :version',
         'my-account' => 'My Account',
         'logout' => 'Logout',
         'visit-shop' => 'Visit Shop',
@@ -151,7 +150,6 @@ return [
         'code' => 'Code',
         'admin-name' => 'Name',
         'name' => 'Name',
-        'copy' => 'Copy',
         'direction' => 'Direction',
         'fullname' => 'Full Name',
         'type' => 'Type',
@@ -365,19 +363,14 @@ return [
             'tax-percent' => 'Tax Percent',
             'tax-amount' => 'Tax Amount',
             'discount-amount' => 'Discount Amount',
+            'discount-amount' => 'Discount Amount',
             'grand-total' => 'Grand Total',
             'total-paid' => 'Total Paid',
             'total-refunded' => 'Total Refunded',
             'total-due' => 'Total Due',
             'cancel-confirm-msg' => 'Are you sure you want to cancel this order ?',
             'refund-btn-title' => 'Refund',
-            'refunds' => 'Refunds',
-            'comment-added-success' => 'Comment addded successfully.',
-            'comment' => 'Comment',
-            'submit-comment' => 'Submit Comment',
-            'notify-customer' => 'Notify Customer',
-            'customer-notified' => ':date | Customer <b>Notified</b>',
-            'customer-not-notified' => ':date | Customer <b>Not Notified</b>'
+            'refunds' => 'Refunds'
         ],
 
         'invoices' => [
@@ -482,6 +475,8 @@ return [
             'price' => 'Price',
             'weight' => 'Weight',
             'status' => 'Status',
+            'enabled' => 'Enabled',
+            'disabled' => 'Disabled',
             'add-variant-title' => 'Add Variant',
             'variant-already-exist-message' => 'Variant with same attribute options already exists.',
             'add-image-btn-title' => 'Add Image',
@@ -513,6 +508,7 @@ return [
             'searching' => 'Searching ...',
             'grouped-products' => 'Grouped Products',
             'search-products' => 'Search Products',
+            'no-result-found' => 'Products not found with same name.',
             'channel' => 'Channels',
             'bundle-items' => 'Bundle Items',
             'add-option-btn-title' => 'Add Option',
@@ -524,12 +520,7 @@ return [
             'checkbox' => 'Checkbox',
             'multiselect' => 'Multiselect',
             'new-option' => 'New Option',
-            'is-default' => 'Is Default',
-            'customer-group' => 'Customer Group',
-            'add-group-price' => 'Add Customer Group Price',
-            'all-group' => 'All Groups',
-            'fixed' => 'Fixed',
-            'discount' => 'Discount',
+            'is-default' => 'Is Default'
         ],
 
         'attributes' => [
@@ -566,6 +557,7 @@ return [
             'yes' => 'Yes',
             'no' => 'No',
             'value_per_locale' => 'Value Per Locale',
+            'value_per_channel' => 'Value Per Channel',
             'value_per_channel' => 'Value Per Channel',
             'is_filterable' => 'Use in Layered Navigation',
             'is_configurable' => 'Use To Create Configurable Product',
@@ -675,6 +667,7 @@ return [
                 'edit-button-title' => 'Edit Rate'
             ],
             'zip_code' => 'Zip Code',
+            'is_zip' => 'Enable Zip Range',
         ],
 
         'sales' => [
@@ -693,6 +686,7 @@ return [
             'title' => 'Locales',
             'add-title' => 'Add Locale',
             'edit-title' => 'Edit Locale',
+            'add-title' => 'Add Locale',
             'save-btn-title' => 'Save Locale',
             'general' => 'General',
             'code' => 'Code',
@@ -819,7 +813,7 @@ return [
             'created-fault' => 'Error in creating slider item',
             'update-success' => 'Slider item successfully updated',
             'update-fail' => 'Slider cannot be updated',
-            'delete-success' => 'Cannot delete last slider item',
+            'delete-success' => 'Cannot delete last llider item',
             'delete-fail' => 'Slider item successfully deleted'
         ],
 
@@ -865,6 +859,7 @@ return [
                 'edit-button-title' => 'Edit Rate'
             ],
             'zip_code' => 'Zip Code',
+            'is_zip' => 'Enable Zip Range',
             'create-success' => 'Tax Rate Created Successfully',
             'create-error' => 'Cannot Create Tax Rate',
             'update-success' => 'Tax Rate Updated Successfully',
@@ -883,6 +878,7 @@ return [
             'edit-title' => 'Edit Group',
             'save-btn-title' => 'Save Group',
             'title' => 'Groups',
+            'save-btn-title' => 'Save Group',
             'code' => 'Code',
             'name' => 'Name',
             'is_user_defined' => 'User Defined',
@@ -898,7 +894,6 @@ return [
             'address-list' => 'Address\'s List',
             'order-list' => 'Order\'s List',
             'address-id' => 'Address ID',
-            'company-name' => 'Company Name',
             'address-1' => 'Address 1',
             'city' => 'City',
             'state-name' => 'State',
@@ -946,6 +941,7 @@ return [
             'other' => 'Other',
             'male' => 'Male',
             'female' => 'Female',
+            'phone' => 'Phone',
             'group-default' => 'Cannot delete the default group.',
             'edit-help-title' => 'Edit Customer',
             'delete-help-title' => 'Delete Customer',
@@ -1015,7 +1011,6 @@ return [
             'choose-condition-to-add' => 'Choose a condition to add',
             'cart-attribute' => 'Cart Attribute',
             'subtotal' => 'Subtotal',
-            'additional' => 'Additional Information',
             'total-items-qty' => 'Total Items Qty',
             'total-weight' => 'Total Weight',
             'payment-method' => 'Payment Method',
@@ -1311,37 +1306,10 @@ return [
             'order-number-suffix' => 'Order Number Suffix',
             'default' => 'Default',
             'sandbox' => 'Sandbox',
-            'all-channels' => 'All Channels',
-            'all-locales' => 'All Locales',
-            'all-customer-groups' => 'All Customer groups',
+            'all-channels' => 'All',
+            'all-locales' => 'All',
             'invoice-slip-design' => 'Invoice Slip Design',
-            'logo' => 'Logo',
-            'storefront' => 'Storefront',
-            'default-list-mode' => 'Default List Mode',
-            'grid' => 'Grid',
-            'list' => 'List',
-            'products-per-page' => 'Products Per Page',
-            'sort-by' => 'Sort By',
-            'from-z-a' => 'From Z-A',
-            'from-a-z' => 'From A-Z',
-            'newest-first' => 'Newest First',
-            'oldest-first' => 'Oldest First',
-            'cheapest-first' => 'Cheapest First',
-            'expensive-first' => 'Expensive First',
-            'comma-seperated' => 'Comma Seperated',
-            'favicon' => 'Favicon',
-            'seo' => 'SEO',
-            'rich-snippets' => 'Rich Snippets',
-            'enable' => 'Enable',
-            'show-weight' => 'Show Weight',
-            'show-categories' => 'Show Categories',
-            'show-images' => 'Show Images',
-            'show-reviews' => 'Show Reviews',
-            'show-ratings' => 'Show Ratings',
-            'show-offers' => 'Show Offers',
-            'show-sku' => 'Show SKU',
-            'categories' => 'Categories',
-            'show-search-input-field' => 'Show Search Input Field'
+            'logo' => 'logo'
        ]
     ]
 ];

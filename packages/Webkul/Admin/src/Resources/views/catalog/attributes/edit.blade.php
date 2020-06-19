@@ -379,7 +379,7 @@
                             @foreach (app('Webkul\Core\Repositories\LocaleRepository')->all() as $locale)
                                 <td>
                                     <div class="control-group" :class="[errors.has(localeInputName(row, '{{ $locale->code }}')) ? 'has-error' : '']">
-                                        <input type="text" v-validate="getOptionValidation(row, '{{ $locale->code }}')" v-model="row['locales']['{{ $locale->code }}']" :name="localeInputName(row, '{{ $locale->code }}')" class="control" data-vv-as="&quot;{{ $locale->name . ' (' . $locale->code . ')' }}&quot;"/>
+                                        <input type="text" v-validate="getOptionValidation(row, '{{ $locale->code }}')" v-model="row['{{ $locale->code }}']" :name="localeInputName(row, '{{ $locale->code }}')" class="control" data-vv-as="&quot;{{ $locale->name . ' (' . $locale->code . ')' }}&quot;"/>
                                         <span class="control-error" v-if="errors.has(localeInputName(row, '{{ $locale->code }}'))">@{{ errors.first(localeInputName(row, '{!! $locale->code !!}')) }}</span>
                                     </div>
                                 </td>
@@ -429,23 +429,22 @@
                     this.optionRowCount++;
 
                     var row = {
-                            'id': @json($option->id),
-                            'admin_name': @json($option->admin_name),
-                            'sort_order': @json($option->sort_order),
-                            'swatch_value': @json($option->swatch_value),
-                            'swatch_value_url': @json($option->swatch_value_url),
-                            'notRequired': '',
-                            'locales': {}
+                            'id': '{{ $option->id }}',
+                            'admin_name': '{{ $option->admin_name }}',
+                            'sort_order': '{{ $option->sort_order }}',
+                            'swatch_value': '{{ $option->swatch_value }}',
+                            'swatch_value_url': '{{ $option->swatch_value_url }}',
+                            'notRequired': ''
                         };
 
                     @if (empty($option->label))
                         this.isNullOptionChecked = true;
-                        this.idNullOption = @json($option->id);
+                        this.idNullOption = '{{ $option->id }}';
                         row['notRequired'] = true;
                     @endif
 
                     @foreach (app('Webkul\Core\Repositories\LocaleRepository')->all() as $locale)
-                        row['locales']['{{ $locale->code }}'] = @json($option->translate($locale->code)['label'] ?? '');
+                        row['{{ $locale->code }}'] = "{{ $option->translate($locale->code)['label'] ?? '' }}";
                     @endforeach
 
                     this.optionRows.push(row);
@@ -466,10 +465,10 @@
                 addOptionRow: function (isNullOptionRow) {
                     const rowCount = this.optionRowCount++;
                     const id = 'option_' + rowCount;
-                    let row = {'id': id, 'locales': {}};
+                    let row = {'id': id};
 
                     @foreach (app('Webkul\Core\Repositories\LocaleRepository')->all() as $locale)
-                        row['locales']['{{ $locale->code }}'] = '';
+                        row['{{ $locale->code }}'] = '';
                     @endforeach
 
                     row['notRequired'] = '';

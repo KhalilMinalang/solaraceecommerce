@@ -1,15 +1,15 @@
 <?php
 
-namespace Webkul\Core\Exceptions;
+namespace Webkul\Admin\Exceptions;
 
-use Throwable;
+use Exception;
 use Illuminate\Auth\AuthenticationException;
-use Doctrine\DBAL\Driver\PDOException;
+use Illuminate\Database\Eloquent\PDOException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Symfony\Component\HttpKernel\Exception\HttpException;
-use App\Exceptions\Handler as AppExceptionHandler;
+use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
-class Handler extends AppExceptionHandler
+class Handler extends ExceptionHandler
 {
     protected $jsonErrorMessages = [
         404 => 'Resource not found',
@@ -22,10 +22,10 @@ class Handler extends AppExceptionHandler
      * Render an exception into an HTTP response.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \Throwable   $exception
+     * @param  \Exception   $exception
      * @return \Illuminate\Http\Response
      */
-    public function render($request, Throwable $exception)
+    public function render($request, Exception $exception)
     {
         $path = $this->isAdminUri() ? 'admin' : 'shop';
 

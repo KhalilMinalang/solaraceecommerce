@@ -36,13 +36,7 @@ class BundleOption extends AbstractProduct
         $options = [];
 
         foreach ($this->product->bundle_options as $option) {
-            $data = $this->getOptionItemData($option);
-
-            if (! count($data['products'])) {
-                continue;
-            }
-
-            $options[$option->id] = $data;
+            $options[$option->id] = $this->getOptionItemData($option);
         }
 
         usort ($options, function($a, $b) {
@@ -85,10 +79,6 @@ class BundleOption extends AbstractProduct
         $products = [];
 
         foreach ($option->bundle_option_products as $index => $bundleOptionProduct) {
-            if (! $bundleOptionProduct->product->getTypeInstance()->isSaleable()) {
-                continue;
-            }
-
             $products[$bundleOptionProduct->id] = [
                 'id'         => $bundleOptionProduct->id,
                 'qty'        => $bundleOptionProduct->qty,
@@ -120,15 +110,15 @@ class BundleOption extends AbstractProduct
     {
         $products = [];
 
-        $products[$product->id] = [
-            'id'         => $product->id,
-            'qty'        => $product->qty,
-            'price'      => $product->product->getTypeInstance()->getProductPrices(),
-            'name'       => $product->product->name,
-            'product_id' => $product->product_id,
-            'is_default' => $product->is_default,
-            'sort_order' => $product->sort_order,
-        ];
+            $products[$product->id] = [
+                'id'         => $product->id,
+                'qty'        => $product->qty,
+                'price'      => $product->product->getTypeInstance()->getProductPrices(),
+                'name'       => $product->product->name,
+                'product_id' => $product->product_id,
+                'is_default' => $product->is_default,
+                'sort_order' => $product->sort_order,
+            ];
 
         usort ($products, function($a, $b) {
             if ($a['sort_order'] == $b['sort_order']) {

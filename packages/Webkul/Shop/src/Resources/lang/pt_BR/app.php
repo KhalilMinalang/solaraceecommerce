@@ -71,8 +71,7 @@ return [
         'no-results' => 'Nenhum resultado encontrado',
         'page-title' => 'Buscar',
         'found-results' => 'Resultados da pesquisa encontrados',
-        'found-result' => 'Resultado da pesquisa encontrado',
-        'analysed-keywords' => 'Analysed Keywords'
+        'found-result' => 'Resultado da pesquisa encontrado'
     ],
 
     'reviews' => [
@@ -307,8 +306,6 @@ return [
                     'individual-refund' => 'Refund #:refund_id',
                     'adjustment-refund' => 'Adjustment Refund',
                     'adjustment-fee' => 'Adjustment Fee',
-                    'tracking-number' => 'Numero de rastreio',
-                    'cancel-confirm-msg'  => 'Tem certeza de que deseja cancelar este pedido ?'
                 ]
             ],
 
@@ -364,7 +361,6 @@ return [
         'layered-nav-title' => 'Compre por',
         'price-label' => 'Tão baixo quanto',
         'remove-filter-link-title' => 'Limpar Todos',
-        'filter-to' => 'a',
         'sort-by' => 'Ordernar por',
         'from-a-z' => 'De A-Z',
         'from-z-a' => 'De Z-A',
@@ -389,7 +385,6 @@ return [
         'new' => 'Novo',
         'empty' => 'Nenhum produto disponível nesta categoria',
         'add-to-cart' => 'Adicionar ao Carrinho',
-        'book-now' => 'Agende agora',
         'buy-now' => 'Comprar Agora',
         'whoops' => 'Oppss!',
         'quantity' => 'Quantidade',
@@ -404,7 +399,7 @@ return [
         'your-customization' => 'Sua personalização',
         'total-amount' => 'Valor total',
         'none' => 'Nenhum',
-        'available-for-order' => 'Disponível para encomenda'
+        'available' => 'Available'
     ],
 
     // 'reviews' => [
@@ -468,7 +463,6 @@ return [
             'shipping' => 'Entrega',
             'payment' => 'Pagamento',
             'complete' => 'Completo',
-            'review' => 'Reveja',
             'billing-address' => 'Endereço de Cobrança',
             'sign-in' => 'Entrar',
             'first-name' => 'Nome',

@@ -68,8 +68,7 @@ return [
         'no-results' => 'お探しの条件に合う検索結果が見つかりませんでした。',
         'page-title' => '検索',
         'found-results' => '検索結果',
-        'found-result' => '検索結果',
-        'analysed-keywords' => 'Analysed Keywords'
+        'found-result' => '検索結果'
     ],
 
     'reviews' => [
@@ -294,8 +293,6 @@ return [
                     'individual-refund' => '返金 #:refund_id',
                     'adjustment-refund' => '返金調整',
                     'adjustment-fee' => '調整手数料',
-                    'tracking-number' => '追跡番号',
-                    'cancel-confirm-msg' => 'この注文をキャンセルしてもよろしいですか ?'
                 ]
             ],
 
@@ -374,7 +371,6 @@ return [
         'new' => 'new',
         'empty' => 'このカテゴリーにアイテムがありません。',
         'add-to-cart' => 'カートに追加する',
-        'book-now' => '今予約する',
         'buy-now' => '今すぐ購入',
         'whoops' => 'すみません！',
         'quantity' => '数量',
@@ -382,8 +378,7 @@ return [
         'out-of-stock' => '在庫なし',
         'view-all' => '全て見る',
         'select-above-options' => '最初に上記のオプションを選択してください.',
-        'less-quantity' => '数量１未満は選択できません.',
-        'available-for-order' => '注文可能',
+        'less-quantity' => '数量１未満は選択できません.'
     ],
 
     'buynow' => [
@@ -437,7 +432,6 @@ return [
             'shipping' => '発送',
             'payment' => '支払い',
             'complete' => '完了',
-            'review' => 'レビュー',
             'billing-address' => '領収書宛先',
             'sign-in' => 'ログイン',
             'first-name' => '名',

@@ -22,7 +22,6 @@ import DateComponent from './components/date';
 import TimeComponent from './components/time';
 import SwatchPicker from './components/swatch-picker';
 import Debounce from './directives/debounce';
-import OverlayLoader from './components/overlay-loader';
 
 Vue.component('flash-wrapper', FlashWrapper);
 Vue.component('flash', Flash);
@@ -46,7 +45,6 @@ Vue.component('date', DateComponent);
 Vue.component("time-component", TimeComponent);
 Vue.component('swatch-picker', SwatchPicker);
 Vue.directive('debounce', Debounce);
-Vue.component('overlay-loader', OverlayLoader);
 Vue.filter('truncate', function (value, limit, trail) {
 	if (! value)
         value = '';

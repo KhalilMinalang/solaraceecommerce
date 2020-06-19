@@ -81,8 +81,6 @@
                 </p>
             </div>
         @endif
-
-        <overlay-loader :is-open="show_loader"></overlay-loader>
     </div>
 
     <script type="text/javascript">
